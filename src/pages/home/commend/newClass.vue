@@ -13,7 +13,7 @@
 						<br />
 						<div class="recom-tips-left-bottom">
 							<span>￥488</span>&nbsp;&nbsp;
-							<icon name="home-recom-personGreen" height="1rem" width="1rem"></icon>
+							<icon name="recom-blue" height="1rem" width="1rem"></icon>
 							<span>1250</span>&nbsp;
 							<icon name="home-recom-vue" height="2.5rem" width="2.5rem"></icon>
 						</div>
@@ -29,7 +29,7 @@
 						<br />
 						<div class="recom-tips-right-bottom">
 							<span>￥366</span>&nbsp;&nbsp;
-							<icon name="home-recom-personRed" height="1rem" width="1rem"></icon>&nbsp;
+							<icon name="recom-red" height="1rem" width="1rem"></icon>&nbsp;
 							<span>340</span>&nbsp;
 							<icon name="home-recom-java" height="2.5rem" width="2.5rem"></icon>
 						</div>
@@ -44,7 +44,7 @@
 				<router-link :to="{name:''}" class="recom-contain">
 					<el-badge value="new" class="item item2">
 						<div class="section-left">
-							<icon name="home-newclass-design" width="8rem" height="5rem"></icon>
+							<img src="../../../images/home/recom3.jpg"  />
 						</div>
 					</el-badge>
 					<div class="section-right">
@@ -55,11 +55,9 @@
 			</div>
 			<div class="section section-two">
 					<router-link :to="{name:''}" class="recom-contain">
-						<el-badge value="new" class="item item2">
 							<div class="section-left">
-								<icon name="home-newclass-automation" width="8rem" height="5rem"></icon>
+								<img src="../../../images/home/recom4.jpg"  />
 							</div>
-						</el-badge>
 						<div class="section-right">
 							<p>Selenium3与Python3实战web</p>
 							<p>自动化测试与框架</p>
@@ -69,9 +67,11 @@
 			</div>
 			<div class="section section-three">
 				<router-link :to="{name:''}" class="recom-contain">
-					<div class="section-left">
-						<icon name="home-newclass-cloud" width="8rem" height="5rem"></icon>
-					</div>
+					<el-badge value="hot" class="item item2">
+						<div class="section-left">
+							<img src="../../../images/home/path6.jpg"  />
+						</div>
+					</el-badge>
 					<div class="section-right">
 						<p>学习Hyperledger Fabric 实战联盟链</p>
 							<p class="price">￥366   中级</p>
@@ -143,6 +143,10 @@
 		margin-top: 0.5rem;
 		font-size: 0.5rem;
 		color: rgba(0,0,0,0.5);
+	}
+	.section-left{
+		width: 12rem;
+		height: 8rem;
 	}
 	.section-right{
 		margin-left: 2rem;

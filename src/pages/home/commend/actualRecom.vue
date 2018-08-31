@@ -13,7 +13,7 @@
 						<br />
 						<div class="recom-tips-left-bottom">
 							<span>￥200</span>&nbsp;&nbsp;
-							<icon name="home-recom-personGreen" height="1rem" width="1rem"></icon>
+							<icon name="recom-green" height="1rem" width="1rem"></icon>
 							<span>2768</span>&nbsp;
 							<icon name="home-recom-vue" height="2.5rem" width="2.5rem"></icon>
 						</div>
@@ -29,7 +29,7 @@
 						<br />
 						<div class="recom-tips-right-bottom">
 							<span>￥230</span>&nbsp;&nbsp;
-							<icon name="home-recom-personRed" height="1rem" width="1rem"></icon>&nbsp;
+							<icon name="recom-red" height="1rem" width="1rem"></icon>&nbsp;
 							<span>235</span>&nbsp;
 							<icon name="home-recom-java" height="2.5rem" width="2.5rem"></icon>
 						</div>
@@ -42,9 +42,11 @@
 		<div class="recom-article">
 			<div class="section section-one">
 				<router-link :to="{name:''}" class="recom-contain">
-					<div class="section-left">
-						<icon name="home-recom-dataStructure" width="8rem" height="5rem"></icon>
-					</div>
+					<el-badge value="new" class="item item2">
+						<div class="section-left">
+							<img src="../../../images/home/recom1.jpg"  />
+						</div>
+					</el-badge>
 					<div class="section-right">
 						<p>玩转数据结构 从入门到进阶</p>
 						<p class="price">￥236   中级</p>
@@ -55,7 +57,8 @@
 					<router-link :to="{name:''}" class="recom-contain">
 						<el-badge value="new" class="item item2">
 							<div class="section-left">
-								<icon name="home-recom-roob" width="8rem" height="5rem"></icon>
+								<!--<icon name="home-recom-roob" width="8rem" height="5rem"></icon>-->
+								<img src="../../../images/home/path1.jpg"  />
 							</div>
 						</el-badge>
 						<div class="section-right">
@@ -67,11 +70,11 @@
 			<div class="section section-three">
 				<router-link :to="{name:''}" class="recom-contain">
 					<div class="section-left">
-						<icon name="home-recom-python" width="8rem" height="5rem"></icon>
+						<img src="../../../images/home/path2.jpg"  />
 					</div>
 					<div class="section-right">
 						<p>Pyhon3入门+进阶 更快上手</p>
-							<p class="price">￥366   中级</p>
+						<p class="price">￥366   中级</p>
 					</div>
 				</router-link>
 			</div>
@@ -140,6 +143,10 @@
 		margin-top: 0.5rem;
 		font-size: 0.5rem;
 		color: rgba(0,0,0,0.5);
+	}
+	.section-left{
+		width: 12rem;
+		height: 8rem;
 	}
 	.section-right{
 		margin-left: 2rem;

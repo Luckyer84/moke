@@ -8,29 +8,29 @@
 			<icon name="home-history" height="1.5rem" width="1.5rem"></icon>
 		</div>
 		<div>	
-			<nav >
-				<div class="t">
-					<router-link :to="{name:'commend'}">
+			<nav @click="mode">
+				<div  class="t">
+					<router-link :to="{name:'commend'}" tag="div">
 						<icon name="recom" height="1.5rem" width="1.5rem"></icon>
-						<span style="color: red;">推荐</span>
+						<span  class="tag" style="color: red;">推荐</span>
 					</router-link>
 				</div>
-				<div class="t">
-					<router-link :to="{name:'course'}">
+				<div  class="t">
+					<router-link :to="{name:'course'}" tag="div">
 						<icon name="class" height="1.5rem" width="1.5rem"></icon>
-						<span>课程</span>
+						<span  class="tag">课程</span>
 					</router-link>
 				</div>
-				<div class="t">
-					<router-link :to="{name:'path'}">
+				<div  class="t">
+					<router-link :to="{name:'path'}" tag="div">
 						<icon name="path" height="1.5rem" width="1.5rem"></icon>
-						<span>路径</span>
+						<span class="tag">路径</span>
 					</router-link>
 				</div>
-				<div class="t">
-					<router-link :to="{name:'practice'}">
+				<div  class="t">
+					<router-link :to="{name:'practice'}" tag="div">
 						<icon name="study" height="1.5rem" width="1.5rem"></icon>
-						<span>实战</span>
+						<span class="tag">实战</span>
 					</router-link>
 				</div>
 			</nav>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-	import '../../mixins/home.js'
+	import {move} from'../../mixins/home.js'
 	import commend from'./commend'
 	import course from'./course'
 	
@@ -52,6 +52,11 @@
 		data (){
 			return {
 				isShow:true
+			}
+		},
+		methods:{
+			mode:function(){
+				move()
 			}
 		},
 
@@ -108,5 +113,8 @@
 	.home-body{
 		margin: 0 1.5rem 0 1.5rem;
 		position: relative;
+	}
+	.tag{
+		display: inline-block;
 	}
 </style>

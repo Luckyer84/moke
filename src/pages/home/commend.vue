@@ -10,17 +10,19 @@
        		 <actual-recom></actual-recom>
        		 <headline-item></headline-item>
        		 <newclass-item></newclass-item>
+       		 
         </div>
 	</div>
 </template>
 
 <script>
 	import '../../mixins/home.js'
+	
 	import Carousel from'../../components/Carousel'
-	/*import luBo from'../../components/lunbo'*/
 	import actualRecom from'./commend/actualRecom'
 	import headline from'./commend/headline'
 	import newClass from'./commend/newClass'
+	
 	
 	export default{
 		data (){

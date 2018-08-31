@@ -1,15 +1,19 @@
 <template>
-	<div class="course-all">
+	<div class="course-container">
 		<div class="clearfix">
-			<div class="course-tags">
+			<div class="course-tags container-box">
 				<el-menu :default-active="activeIndex" class="el-menu-demo tagAll" mode="horizontal" >
 				  		<el-menu-item class="padding" index="1"><el-tag class="tag" type="danger">全部</el-tag></el-menu-item>
-						  <el-menu-item index="2" class="padding" ><el-tag class="tag" >前沿技术</el-tag></el-menu-item>
-						  <el-menu-item index="3" class="padding"><el-tag class="tag">前端开发</el-tag></el-menu-item>
-						  <el-menu-item index="4" class="padding"><el-tag class="tag">后端开发</el-tag></el-menu-item>
-						  <el-menu-item index="5" class="padding"><el-tag class="tag">移动开发</el-tag></el-menu-item>
-						  <el-menu-item index="6" class="padding"><el-tag class="tag">云计算</el-tag></el-menu-item>
-						  <el-menu-item index="7" class="padding"><el-tag class="tag">数据库</el-tag></el-menu-item>
+						<el-menu-item index="2" class="padding" ><el-tag class="tag" >前沿技术</el-tag></el-menu-item>
+						<el-menu-item index="3" class="padding"><el-tag class="tag">前端开发</el-tag></el-menu-item>
+						<el-menu-item index="4" class="padding"><el-tag class="tag">后端开发</el-tag></el-menu-item>
+						<el-menu-item index="5" class="padding"><el-tag class="tag">移动开发</el-tag></el-menu-item>
+						<el-menu-item index="6" class="padding"><el-tag class="tag">云计算</el-tag></el-menu-item>
+						<el-menu-item index="7" class="padding"><el-tag class="tag">数据库</el-tag></el-menu-item>
+						<el-menu-item index="8" class="padding"><el-tag class="tag">后端开发</el-tag></el-menu-item>
+						<el-menu-item index="9" class="padding"><el-tag class="tag">移动开发</el-tag></el-menu-item>
+						<el-menu-item index="10" class="padding"><el-tag class="tag">云计算</el-tag></el-menu-item>
+						<el-menu-item index="11" class="padding"><el-tag class="tag">我的世界</el-tag></el-menu-item>
 				</el-menu>
 			</div>
 		</div>
@@ -36,7 +40,7 @@
 </script>
 
 <style scoped>
-	.course-all{
+	.course-container{
 		width: 100%;
 		overflow: hidden;
 	}

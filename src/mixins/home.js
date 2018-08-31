@@ -1,29 +1,5 @@
 
 	$(document).ready(function(){
-		let move= $(".t").click(function(){
-			let index=$(this).index();
-			let $span=$("span");
-			let $span_i=$($span[index]);
-			let width=3.7+index*7.8+'rem';
-			$(".underline").animate({left:width},300);
-			
-			switch(index)
-			{
-				case 0:	$span_i.css("color","red");
-						$(".home-header").css('background',"red");
-						break;
-				case 1:	$span_i.css("color","blue");
-						$(".home-header").css('background',"blue");
-						break;
-				case 2:	$span_i.css("color","purple");
-						$(".home-header").css('background',"purple");
-						break;
-				case 3:	$span_i.css("color","rgba(255,204,0,0.5)");
-						$(".home-header").css('background',"rgba(255,204,0,0.5)");
-						break;
-			}
-			$span.not($span_i).css("color","black");
-		})
 		
 	//图片的滚动
 	/*	let scrollImage=(function(){
@@ -81,7 +57,7 @@
 		    let timer=setInterval(moveImage,3000);
 	})()
 		*/
-		//鼠标移动
+	/*	//鼠标移动
 		let s=(function(){
 				let width=0;
 				$(".tagAll").on('touchstart', function(e){//手指 触摸
@@ -109,9 +85,86 @@
 		       				 				}
        							 }
 							})
-				})()
+				})()	
+*/		/*let roll=(function(){
+				let width=0;
+				let ft=parseInt(document.documentElement.style.fontSize) ;//获取字体大小 换算成rem
+				let deviceWidth = document.documentElement.clientWidth ;//375
+				let fuWidth = $(".container-box").width();//830
+			
+				$(".tagAll").on('touchstart', function(e){//手指 触摸
+       				startX = e.originalEvent.changedTouches[0].pageX;
+       				alert(1);
+       				
+				})
 				
+				$(".tagAll").on('touchend',function(e){//手指 离开
+       				 moveEndX = e.originalEvent.changedTouches[0].pageX;
+       				let slideNum =parseInt((moveEndX-startX)/ft);//滑动的距离
+       				let width=parseInt($(this).position().left/ft);//当前位置
+       				let widthall=width+slideNum + 'rem';//最终距离
+       				let x=moveEndX-startX;
+       				 if(x>20){//右滑
+       				 	
+		       				 	if(width<=2){
+		       				 		$(this).animate({left:widthall},function(){
+		       				 			let width1=parseInt($(this).position().left/ft);//需要再次判断当前的位置，用回调函数进行动画。很重要！！！！！
+		       				 				if(width1>0){
+		       				 					$(this).animate({left:'0'});
+		       				 				}
+		       				 		})
+		       				 	}else{
+		       				 		$(this).animate({left:'0'});
+		       				 	}
+       				 		}else if(x<-20){  //左滑
+       				 	let outOfPart=-parseInt((fuWidth-deviceWidth)/ft) +'rem';
+       				 		if(width>=outOfPart){
+		       				 		$(this).animate({left:widthall});
+		       				 }else{
+		       				 		$(this).animate({left:outOfPart});
+		       				 			}
+       							 }
+							})
 				
+				})()*/
 
 	})
+let move= function(){
+			$(".t").on("touchend",function(){	
+			let index=$(this).index();
+			let $span=$("span");
+			let $span_i=$($span[index]);
+			let width=3.7+index*7.8+'rem';
+			$(".underline").stop().animate({left:width},300);
+			switch(index)
+			{
+				case 0:	$span_i.css("color","red");
+						$(".home-header").css('background',"red");
+						break;
+				case 1:	$span_i.css("color","blue");
+						$(".home-header").css('background',"blue");
+						break;
+				case 2:	$span_i.css("color","purple");
+						$(".home-header").css('background',"purple");
+						break;
+				case 3:	$span_i.css("color","rgba(255,204,0,0.5)");
+						$(".home-header").css('background',"rgba(255,204,0,0.5)");
+						break;
+			}
+			$span.not($span_i).css("color","black");
+		})
+}
 
+let changeSize=function(){
+	$('.title').on('click',function(){
+		let index=$(this).index();
+		let $title=$('.title');
+		let $title_i=$($title[index]);
+		$title_i.addClass("class-a");
+		$title.not($title_i).removeClass("class-a first");
+	})
+}
+export {
+	move,
+	changeSize
+}

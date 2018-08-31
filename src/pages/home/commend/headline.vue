@@ -13,6 +13,12 @@
 					<li>消息队列beanstalked解析</li>
 					<li>【漫画】永远无法预见的未来~</li>
 					<li>如影随行的设计模式与现实世界</li>
+					<li>别打我！常见的DOM打地鼠</li>
+					<li>多线程并发的使用、学习与测试</li>
+					<li>消息队列beanstalked解析</li>
+					<li>别打我！常见的DOM打地鼠</li>
+					<li>多线程并发的使用、学习与测试</li>
+					<li>消息队列beanstalked解析</li>
 				</ul>
 			</div>
 		</div>
@@ -24,7 +30,7 @@
 
 <style scoped>
 .headline-background{
-	background-color: rgba(153,153,153,0.2);
+	background-color: rgba(153,153,153,0.15);
 	padding-top: 0.7rem;
 	padding-bottom: 0.7rem;
 }
@@ -72,29 +78,42 @@ ul{
 	position: absolute;
 	top: 0;
 	left: 0;
-	animation: roll 12s linear infinite ;
+	animation: roll 24s linear infinite ;
 }
 @keyframes roll{
 	0{
 		top:0
 	}
-	27%{
+	12%{
 		top:0rem
 	}
-	33%{
+	16.6%{
 		top:-3.7rem
 	}
-	60%{
+	28.7%{
 		top: -3.7rem;
 	}
-	66%{
+	33.3%{
 		top: -7.4rem;
 	}
-	94%{
+	45.4%{
 		top: -7.4rem;
 	}
-	100%{
-		top: -11rem;
+	50%{
+		top: -11.1rem;
+	}
+	62.1%{
+		top: -11.1rem;
+	}
+	66.7%{
+		top: -14.8rem;
+	}78.7%{
+		top: -14.8rem;
+	}
+	83.3%{
+		top: -18.5rem;
+	}100%{
+		top: -18.5rem;
 	}
 
 }

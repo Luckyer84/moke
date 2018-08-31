@@ -1,9 +1,9 @@
 <template>
 	<el-carousel :interval="4000" type="card" height="60px">
-    <el-carousel-item v-for="item in list" >
-    	 <a href="#"><img v-bind:src="item.src" /></a>
-    </el-carousel-item>
- </el-carousel>
+	    <el-carousel-item v-for="item in list" >
+	    	 <a href="#"><img v-bind:src="item.src" /></a>
+	    </el-carousel-item>
+ 	</el-carousel>
 </template>
 
 <script>
