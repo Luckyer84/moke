@@ -1,5 +1,5 @@
 <template>
-	<el-carousel :interval="4000" type="card" height="60px">
+	<el-carousel :interval="4000" type="card" height="8rem">
 	    <el-carousel-item v-for="item in list" >
 	    	 <a href="#"><img v-bind:src="item.src" /></a>
 	    </el-carousel-item>
@@ -22,5 +22,7 @@
 </script>
 
 <style scoped>
-
+	img{
+		height: 8rem;
+	}
 </style>

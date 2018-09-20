@@ -1,7 +1,7 @@
 <template>
 	<div class="pratice-all">
 		<div class="pratice-carousel">
-			<el-carousel :interval="4000" indicator-position="outside"  height="100px">
+			<el-carousel :interval="4000" indicator-position="outside"  height="10rem">
 	   			<el-carousel-item v-for="item in list" >
 	      			 <a href="#">
 	      			 	<img v-bind:src="item.src" />

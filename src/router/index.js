@@ -7,10 +7,17 @@ import commend from '@/pages/home/commend'
 import course from '@/pages/home/course'
 import path from '@/pages/home/path'
 import practice from '@/pages/home/practice'
+
 import search from '@/pages/search/search'
 import notes from '@/pages/search/notes'
 import question from '@/pages/search/question'
 import trend from '@/pages/search/trend'
+import recommend from '@/pages/search/notes/recommend'
+import information from '@/pages/search/notes/information'
+import news from '@/pages/search/notes/news'
+import artificialIntelligence from '@/pages/search/notes/artificialIntelligence'
+import view from '@/pages/search/notes/view'
+
 import load from '@/pages/load/load'
 import person from '@/pages/person/person'
 import recomVue from '@/pages/home/commend/actualRecom-Vue'
@@ -82,7 +89,33 @@ export default new Router({
 	      			path:'notes',
 	      			name:'notes',
 	      			component:notes,
-	      			meta:{ title:'手记'}
+	      			meta:{ title:'手记'},
+	      			children:[
+	      				{
+	      					path:'recommend',
+	      					name:'recommend',
+	      					component:recommend,
+	      					meta:{ title:'推荐' }
+	      				},
+	      				{
+	      					path:'information',
+	      					name:'information',
+	      					component:information,
+	      					meta:{ title:'资讯' }
+	      				},
+	      				{
+	      					path:'news',
+	      					name:'news',
+	      					component:news,
+	      					meta:{ title:'最新文章' }
+	      				},
+	      				{
+	      					path:'artificialIntelligence',
+	      					name:'artificialIntelligence',
+	      					component:artificialIntelligence,
+	      					meta:{ title:'人工智能' }
+	      				},
+	      			]
 	      		},
 	      		{
 	      			path:'question',
@@ -120,7 +153,11 @@ export default new Router({
     	name:'recomVue',
     	component:recomVue
     },
-    
+    {
+    	path:'/view',
+    	name:'view',
+    	component:view
+    },
     
     {
     	path:'/',

@@ -14,7 +14,7 @@
 				</div>
 				
 				<div @click="changeIcon(2)">
-					<router-link :to="{name:'notes'}">
+					<router-link :to="{name:'recommend'}">
 						<icon name="main_search_white" height="2rem" width="2rem" v-show='isShowTwo'></icon>
 						<icon name="main_search_red" height="2rem" width="2rem" v-show='!isShowTwo'></icon><p>发现</p>
 					</router-link>

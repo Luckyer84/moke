@@ -9,12 +9,14 @@ import jquery from 'jquery'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Icon from 'vue-svg-icon/Icon.vue' //引入svg
+import  VueResource  from 'vue-resource'
 /*import fastclick from 'fastclick'
 */
 
 Vue.config.productionTip = false
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
+Vue.use(VueResource)
 /*fastclick.attach(document.body);*/
 Vue.component('icon', Icon) //注册svg
 /* eslint-disable no-new */
